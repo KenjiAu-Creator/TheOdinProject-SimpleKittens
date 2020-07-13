@@ -16,10 +16,13 @@ Download the files and run the database migration with
   
   rails db:migrate
 
-To check the JSON queries fire up the IRB
-  run $ require' rest-client'
-  $ response = RestClient.get("http://localhost:3000/kittens", :accept => :json)
-  $ puts response.body
+To check the JSON queries:
+  $ rails s
+Then fire up the IRB
+  $ irb
+  > require' rest-client'
+  > response = RestClient.get("http://localhost:3000/kittens", :accept => :json)
+  > puts response.body
 
 Contribute
 -----------
