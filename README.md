@@ -1,24 +1,35 @@
-# README
+The Odin Project Simple Kittens API
+===========
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a straightforward project where an Rails app was set up to be a data-producing API. 
 
-Things you may want to cover:
+Features
+-----------
 
-* Ruby version
+-Quick creation of kitten models and input into the database
+-Responds to JSON queries made into the show and index actions
 
-* System dependencies
+Installation
+-----------
 
-* Configuration
+Download the files and run the database migration with
+  
+  rails db:migrate
 
-* Database creation
+To check the JSON queries fire up the IRB
+  run $ require' rest-client'
+  $ response = RestClient.get("http://localhost:3000/kittens", :accept => :json)
+  $ puts response.body
 
-* Database initialization
+Contribute
+-----------
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Support
+-----------
 
-* Deployment instructions
 
-* ...
+License
+-----------
+
+The project is licensed under the BSD license.
