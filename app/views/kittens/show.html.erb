@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
+<h1><%= @kitten.name %></h1>
+<table>
+  <tr>
+    <td>Age</td>
+    <td>Cuteness</td>
+    <td>Softness</td>
+  </tr>
+  <tr>
+    <td><%= @kitten.age %></td>
+    <td><%= @kitten.cuteness %></td>
+    <td><%= @kitten.softness %></td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_kitten_path(@kitten) %> |
-<%= link_to 'Back', kittens_path %>
+<%= link_to 'Back', kittens_path %> |
+<%= link_to 'Delete', kitten_path, method: :delete, data: { confirm: "Are you sure?" } %>
